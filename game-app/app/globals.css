@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #1a1a2e;
+  --foreground: #f9fafb;
+
+  --color-nab-primary: #f97316; /* cam đậm cho nút chính */
+  --color-nab-primary-soft: #fed7aa;
+  --color-nab-secondary: #22c55e; /* xanh lá */
+  --color-nab-accent: #eab308; /* vàng */
+
+  --color-nab-card: rgba(255, 255, 255, 0.08);
+  --color-nab-border-subtle: rgba(148, 163, 184, 0.4);
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+}
+
+.font-display {
+  font-family: var(--font-montserrat);
+}
+
+.font-body {
+  font-family: var(--font-be-vietnam);
+}
+
+.btn-main-menu {
+  @apply w-full flex items-center justify-between gap-3 rounded-2xl border border-transparent px-8 py-4 sm:py-5 shadow-[0_10px_0_rgba(0,0,0,0.4)] transition active:translate-y-1 active:shadow-[0_4px_0_rgba(0,0,0,0.4)];
+}
+
+.btn-main-menu--primary {
+  background: linear-gradient(135deg, #fb923c, #ea580c);
+  @apply text-white font-semibold;
+}
+
+.btn-main-menu--secondary {
+  background: radial-gradient(circle at top left, #22c55e, #15803d);
+  @apply text-white font-semibold;
+}
+
+.btn-main-menu--muted {
+  background: var(--color-nab-card);
+  @apply text-slate-100 font-medium border-[1px] border-[rgba(148,163,184,0.4)];
+}
+
+.btn-main-menu__label {
+  @apply text-lg sm:text-xl leading-snug;
+}
+
+.btn-main-menu__tag {
+  @apply rounded-full bg-black/25 px-3 py-1 text-xs font-semibold uppercase tracking-wide;
+}
+
+.btn-main-menu__icon {
+  @apply text-2xl sm:text-3xl;
+}
+
+.screen-title {
+  @apply font-display text-2xl sm:text-3xl text-center text-white mb-6;
+}
+
+.screen-subtitle {
+  @apply text-center text-sm text-slate-300 mb-8;
+}
+
+.overlay-backdrop {
+  @apply fixed inset-0 bg-black/60 flex items-center justify-center z-50;
+}
+
+.overlay-panel {
+  @apply w-full max-w-lg rounded-3xl bg-slate-900/95 border border-slate-700/60 shadow-2xl p-6 sm:p-8;
+}
